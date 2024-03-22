@@ -1,0 +1,141 @@
+﻿@{
+    ViewBag.Title = "Shop Online";
+    ViewBag.SeoDescription = "Shop Online";
+}
+<link rel="stylesheet" type="text/css" href="~/Content/assets/styles/main_styles.css">
+<!-- Slider -->
+
+<div class="main_slider" style="margin-top:240px">
+    <div class="container">
+        <div id="demo" class="carousel slide" data-ride="carousel" style="width:100% ; heigh:700px">
+            @*Indicators*@
+            <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+                <li data-target="#demo" data-slide-to="3"></li>
+                <li data-target="#demo" data-slide-to="4"></li>
+            </ul>
+            @*The slideshow*@
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img style="width:100%; height:100%;" src="~/Content/assets/images/slide_5.jpg" alt="Quảng cáo 1">
+                </div>
+                <div class="carousel-item">
+                    <img style="width:100%; height:100%;" src="~/Content/assets/images/slide_2.jpg" alt="Quảng cáo 2">
+                </div>
+                <div class="carousel-item">
+                    <img style="width:100%; height:100%;" src="~/Content/assets/images/slide_3.jpg" alt="Quảng cáo 3">
+                </div>
+                <div class="carousel-item">
+                    <img style="width:100%; height: 100%;" src="~/Content/assets/images/slide_4.jpg" alt="Quảng cáo 4">
+                </div>
+
+            </div>
+
+            @*Left and right controls*@
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="carousel-control-prev-icon" style="color:red"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Banner -->
+@Html.Action("MenuProductCategory", "Menu")
+
+<!-- New Arrivals -->
+
+<div class="new_arrivals">
+    <div class="container">
+        @Html.Action("MenuArrivals", "Menu")
+    </div>
+</div>
+
+<!-- Deal of the week -->
+<!--<div class="deal_ofthe_week">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="deal_ofthe_week_img">
+                    <img src="~/Content/assets/images/khuyenmai.jpg" alt="">
+                </div>
+            </div>
+            <div class="col-lg-6 text-right deal_ofthe_week_col">
+                <div class="deal_ofthe_week_content d-flex flex-column align-items-center float-right">
+                    <div class="section_title">
+                        <h2>Sản phẩm giảm giá trong tuần</h2>
+                    </div>
+                    <ul class="timer">
+                        <li class="d-inline-flex flex-column justify-content-center align-items-center">
+                            <div id="day" class="timer_num">03</div>
+                            <div class="timer_unit">Day</div>
+                        </li>
+                        <li class="d-inline-flex flex-column justify-content-center align-items-center">
+                            <div id="hour" class="timer_num">15</div>
+                            <div class="timer_unit">Hours</div>
+                        </li>
+                        <li class="d-inline-flex flex-column justify-content-center align-items-center">
+                            <div id="minute" class="timer_num">45</div>
+                            <div class="timer_unit">Mins</div>
+                        </li>
+                        <li class="d-inline-flex flex-column justify-content-center align-items-center">
+                            <div id="second" class="timer_num">23</div>
+                            <div class="timer_unit">Sec</div>
+                        </li>
+                    </ul>
+                    <div class="red_button deal_ofthe_week_button" style="background:#009999"><a href="#">shop now</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+<-->
+<!-- Best Sellers -->
+@Html.Action("Partial_ProductSales", "Products")
+<!-- Benefit -->
+
+<div class="benefit">
+    <div class="container">
+        <div class="row benefit_row">
+            <div class="col-lg-3 benefit_col">
+                <div class="benefit_item d-flex flex-row align-items-center">
+                    <div class="benefit_icon"><i class="fa fa-truck" aria-hidden="true"></i></div>
+                    <div class="benefit_content">
+                        <h6>Miễn phí giao hàng</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 benefit_col">
+                <div class="benefit_item d-flex flex-row align-items-center">
+                    <div class="benefit_icon"><i class="fa fa-money" aria-hidden="true"></i></div>
+                    <div class="benefit_content">
+                        <h6>Nhận thanh toán bằng thẻ</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 benefit_col">
+                <div class="benefit_item d-flex flex-row align-items-center">
+                    <div class="benefit_icon"><i class="fa fa-undo" aria-hidden="true"></i></div>
+                    <div class="benefit_content">
+                        <h6>Trả hàng trong 45 ngày</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 benefit_col">
+                <div class="benefit_item d-flex flex-row align-items-center">
+                    <div class="benefit_icon"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
+                    <div class="benefit_content">
+                        <h6>Mở cửa hàng tuần</h6>
+                        <p>8AM - 09PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Blogs -->
+@Html.Action("Partial_News_Home", "News")
